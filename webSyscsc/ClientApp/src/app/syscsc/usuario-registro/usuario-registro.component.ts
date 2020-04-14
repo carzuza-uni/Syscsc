@@ -35,7 +35,7 @@ export class UsuarioRegistroComponent implements OnInit {
         this.usuario.primerApellido = '';
         this.usuario.segundoApellido = '';
         this.usuario.numeroCedula = '';
-        this.usuario.usuario = '';
+        this.usuario.usuarioI = '';
         this.usuario.contrasena = '';
         this.usuario.confirmarContrasena = '';
         this.usuario.email = '';

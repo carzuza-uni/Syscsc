@@ -5,7 +5,7 @@ export class Usuario {
     primerApellido: string;
     segundoApellido: string;
     numeroCedula: string;
-    usuario: string;
+    usuarioI: string;
     contrasena: string;
     confirmarContrasena: string;
     telefono: string;
