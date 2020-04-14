@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Registrar usuario</h1>
+    </div>
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-body">
+                <form >
+                    <div class="row">
+                        <div class="col-md-3 pr-1">                            
+                            <div class="form-group">
+                                <label>Primer nombre</label>
+                                <input type="text"  name="primerNombre" [(ngModel)]="usuario.primerNombre" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pl-1">                            
+                            <div class="form-group">
+                                <label>Segundo nombre</label>
+                                <input type="text"  name="segundoNombre" [(ngModel)]="usuario.segundoNombre" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pr-1">                            
+                            <div class="form-group">
+                                <label>Primer apellido</label>
+                                <input type="text"  name="primerApellido" [(ngModel)]="usuario.primerApellido" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pl-1">                            
+                            <div class="form-group">
+                                <label>Segundo apellido</label>
+                                <input type="text"  name="segundoApellido" [(ngModel)]="usuario.segundoApellido" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pr-1">
+                            <div class="form-group">
+                                <label>Número de cédula</label>
+                                <input type="number"  name="numeroCedula" [(ngModel)]="usuario.numeroCedula" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pl-1">                            
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <input type="number"  name="telefono" [(ngModel)]="usuario.telefono" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pr-1">                            
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email"  name="email" [(ngModel)]="usuario.email" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pl-1">
+                            <div class="form-group">
+                                <label>Tipo de usuario</label>
+                                <select name="tipoUsuario" [(ngModel)]="usuario.tipoUsuario" class="form-control" >
+                                    <option value="" style="display: none;">Seleccione una opción...</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Técnico</option>
+                                </select>
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pr-1">
+                            <div class="form-group">
+                                <label>Usuario</label>
+                                <input type="text"  name="usuario" [(ngModel)]="usuario.usuario" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pl-1">
+                            <div class="form-group">
+                                <label>Contraseña</label>
+                                <input type="password"  name="contrasena" [(ngModel)]="usuario.contrasena" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pr-1">
+                            <div class="form-group">
+                                <label>Confirmar contraseña</label>
+                                <input type="password"  name="confirmarContrasena" [(ngModel)]="usuario.confirmarContrasena" class="form-control" />
+                                <div class="invalid-feedback">Este campo es obligatorio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                            <button class="btn btn-outline-success" (click)="add()">Registrar</button>
+                            <button type="reset" class="btn btn-outline-secondary">Cancelar</button>                            
+                        </div>
+                      </div>
+                </form> 
+            </div>
+        </div>
+                   
+    </div>
+</div>
+
