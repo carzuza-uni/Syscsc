@@ -18,6 +18,10 @@ export class Usuario {
         return tipo[this.tipoUsuario];
     }
 
+    nombreCompleto(){
+        return this.primerNombre +' '+ this.segundoNombre +' '+ this.primerApellido +' '+ this.segundoApellido;
+    }
+
     validarContrasena(){
         if(this.contrasena == this.confirmarContrasena){
             return true;
