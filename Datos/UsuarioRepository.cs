@@ -80,7 +80,8 @@ namespace Datos
 
         private Usuario DataReaderMap(SqlDataReader dataReader)
         {
-            if(!dataReader.HasRows) return null;
+            if(!dataReader.HasRows) 
+                return null;
             Usuario usuario = new Usuario();
             usuario.TipoUsuario = (int)dataReader["TipoUsuario"];
             usuario.PrimerNombre = (string)dataReader["PrimerNombre"];

@@ -16,6 +16,10 @@ export class UsuarioConsultaComponent implements OnInit {
   ngOnInit() {
     this.usuarioService.get().subscribe(result => {
       this.usuarios = result;
+      for(let i=0; i<this.usuarios.length; i++){
+        this.usuarios[i]['nombre'] = this.usuarios[i].nombreCompleto();
+        this.usuarios[i]['nombreTipoUsuario'] = this.usuarios[i].tipoUsuarioNombre();
+      }
     }) 
   }
 
