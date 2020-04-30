@@ -9,17 +9,39 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioConsultaComponent implements OnInit {
   usuarios: Usuario[];
+  u: Usuario;
   searchText:string;
 
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.usuarioService.get().subscribe(result => {
-      this.usuarios = result;
-      for(let i=0; i<this.usuarios.length; i++){
-        this.usuarios[i]['nombre'] = this.usuarios[i].nombreCompleto();
-        this.usuarios[i]['nombreTipoUsuario'] = this.usuarios[i].tipoUsuarioNombre();
+      console.log('result',result);
+      let datos = [];
+      for (let i = 0; i < result.length; i++) {
+        const element = result[i];
+        this.u = new Usuario();
+        this.u.tipoUsuario = element.tipoUsuario;
+        this.u.primerNombre = element.primerNombre;
+        this.u.segundoNombre = element.segundoNombre;
+        this.u.primerApellido = element.primerApellido;
+        this.u.segundoApellido = element.segundoApellido;
+        this.u.numeroCedula = element.numeroCedula;
+        this.u.usuarioI = element.usuarioI;
+        this.u.email = element.email;
+        this.u.telefono = element.telefono;
+        this.u.setTipoUsuarioNombre();
+        this.u.setNombreCompleto();
+
+        //console.log('u', this.u);
+        let item = JSON.stringify(this.u);
+        //console.log('item', item);
+        let item2 = JSON.parse(item);
+        console.log('item2', item2);
+        datos.push(item2);
       }
+      console.log('datos', datos);
+      this.usuarios = datos;
     }) 
   }
 

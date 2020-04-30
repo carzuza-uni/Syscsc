@@ -10,16 +10,18 @@ export class Usuario {
     confirmarContrasena: string;
     telefono: string;
     email: string;
+    tipoUsuarioNombre: string;
+    nombreCompleto: string;
 
-    tipoUsuarioNombre(){
+    setTipoUsuarioNombre(){
         let tipo = [];
         tipo[1] = 'Administrador';
         tipo[2] = 'Técnico';
-        return tipo[this.tipoUsuario];
+        this.tipoUsuarioNombre = tipo[this.tipoUsuario];
     }
 
-    nombreCompleto(){
-        return this.primerNombre +' '+ this.segundoNombre +' '+ this.primerApellido +' '+ this.segundoApellido;
+    setNombreCompleto(){
+        this.nombreCompleto = this.primerNombre +' '+ this.segundoNombre +' '+ this.primerApellido +' '+ this.segundoApellido;
     }
 
     validarContrasena(){

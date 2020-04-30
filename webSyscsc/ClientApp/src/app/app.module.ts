@@ -24,6 +24,13 @@ import { FichaAuditoriaRegistroComponent } from './syscsc/ficha-auditoria-regist
 
 import { UsuarioService } from './services/usuario.service';
 import { PersonaService } from './services/persona.service';
+import { FiltroUsuarioPipe } from './pipe/filtro-usuario.pipe';
+import { ProductorDetalleComponent } from './syscsc/productor-detalle/productor-detalle.component';
+import { ProductorDatosFamiliaComponent } from './syscsc/productor-datos-familia/productor-datos-familia.component';
+import { ProductorAgroclimaticaComponent } from './syscsc/productor-agroclimatica/productor-agroclimatica.component';
+import { ProductorFertilizacionNutricionComponent } from './syscsc/productor-fertilizacion-nutricion/productor-fertilizacion-nutricion.component';
+import { ProductorProducccionPecuariaAgricolaComponent } from './syscsc/productor-producccion-pecuaria-agricola/productor-producccion-pecuaria-agricola.component';
+import { NavMenuProductorComponent } from './syscsc/nav-menu-productor/nav-menu-productor.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +47,14 @@ import { PersonaService } from './services/persona.service';
     FormatoAuditoriaConsultaComponent,
     MateriaPrimaConsultaComponent,
     FichaDiagnosticoConsultaComponent,
-    FichaAuditoriaRegistroComponent
+    FichaAuditoriaRegistroComponent,
+    FiltroUsuarioPipe,
+    ProductorDetalleComponent,
+    ProductorDatosFamiliaComponent,
+    ProductorAgroclimaticaComponent,
+    ProductorFertilizacionNutricionComponent,
+    ProductorProducccionPecuariaAgricolaComponent,
+    NavMenuProductorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

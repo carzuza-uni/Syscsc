@@ -10,6 +10,11 @@ import { FormatoAuditoriaConsultaComponent } from './syscsc/formato-auditoria-co
 import { MateriaPrimaConsultaComponent } from './syscsc/materia-prima-consulta/materia-prima-consulta.component';
 import { FichaDiagnosticoConsultaComponent } from './syscsc/ficha-diagnostico-consulta/ficha-diagnostico-consulta.component';
 import { FichaAuditoriaRegistroComponent } from './syscsc/ficha-auditoria-registro/ficha-auditoria-registro.component';
+import { ProductorDetalleComponent } from './syscsc/productor-detalle/productor-detalle.component';
+import { ProductorProducccionPecuariaAgricolaComponent } from './syscsc/productor-producccion-pecuaria-agricola/productor-producccion-pecuaria-agricola.component';
+import { ProductorFertilizacionNutricionComponent } from './syscsc/productor-fertilizacion-nutricion/productor-fertilizacion-nutricion.component';
+import { ProductorAgroclimaticaComponent } from './syscsc/productor-agroclimatica/productor-agroclimatica.component';
+import { ProductorDatosFamiliaComponent } from './syscsc/productor-datos-familia/productor-datos-familia.component';
 
 const routes: Routes = [
   {
@@ -39,6 +44,26 @@ const routes: Routes = [
   {
       path: 'productorConsulta',
       component: ProductorConsultaComponent
+  },
+  {
+      path: 'productorDetalle/:id',
+      component: ProductorDetalleComponent
+  },
+  {
+      path: 'productorDatosFamilia/:id',
+      component: ProductorDatosFamiliaComponent
+  },
+  {
+      path: 'productorAgroclimatica/:id',
+      component: ProductorAgroclimaticaComponent
+  },
+  {
+      path: 'productorFertilizacionNutricion/:id',
+      component: ProductorFertilizacionNutricionComponent
+  },
+  {
+      path: 'productorProduccionPecuariaAgricola/:id',
+      component: ProductorProducccionPecuariaAgricolaComponent
   },
   {
       path: 'formatoAuditoriaConsulta',

@@ -20,6 +20,7 @@
                     <th>Código finca</th>
                     <th>Codigo SICA</th>
                     <th>Municipio</th>
+                    <th>Acción</th>
                 </thead>
                 <tbody>
                     <!--<tr *ngFor="let persona of personas; index as i ">
@@ -37,6 +38,9 @@
                         <td>0000</td>
                         <td>1111</td>
                         <td>Valledupar</td>
+                        <td>
+                          <a [routerLink]="['/productorDatosFamilia', 1]"><button class="btn btn-outline-success btn-sm">Detalle</button></a>
+                        </td>
                     </tr>
                     <tr>
                         <th>Carlos</th>

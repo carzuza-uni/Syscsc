@@ -10,9 +10,13 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class UsuarioRegistroComponent implements OnInit {
   usuario: Usuario;
-
+  numeroCedula;
   constructor(private route: ActivatedRoute, private usuarioService: UsuarioService) { 
-    console.log(route.snapshot.params['id']);
+    this.numeroCedula = route.snapshot.params['id'];
+    console.log('numeroCedula', this.numeroCedula);
+    if(this.numeroCedula){
+      //consultar
+    }
   }
 
   ngOnInit() {
